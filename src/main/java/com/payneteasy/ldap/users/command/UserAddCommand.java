@@ -42,8 +42,8 @@ public class UserAddCommand implements ICommand {
     public void execute(OptionSet aOptionSet, IDirectoryService aDirectoryService, IOutputService aFormatService) throws Exception {
         final String userParameter = aOptionSet.valueOf(usernameSpec);
 
-        String userDn =  "cn="+userParameter+","+theUsersBase;
-        String groupDn = "cn="+userParameter+","+theGroupsBase;
+        String userDn =  "uid="+userParameter+","+theUsersBase;
+        String groupDn = "uid="+userParameter+","+theGroupsBase;
 
         String id = String.valueOf(aOptionSet.valueOf(idSpec));
         String gecos = aOptionSet.valueOf(gecosSpec);

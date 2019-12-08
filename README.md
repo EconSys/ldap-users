@@ -19,7 +19,7 @@ java \
   -Djavax.net.ssl.trustPassword=STORE_PASSWORD \
   -jar target/users-1.0-SNAPSHOT-jar-with-dependencies.jar \
   -url=ldaps://localhost:636/ \
-  -username="cn=admin,ou=users,dc=example,dc=com" \
+  -username="uid=admin,ou=users,dc=example,dc=com" \
   -password=LDAP_PASSWORD \
   -users-dn="ou=users,dc=example,dc=com" \
   -groups-dn="ou=groups,dc=example,dc=com"

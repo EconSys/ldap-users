@@ -40,7 +40,7 @@ public class CheckInactiveUsers {
         calendar.setTime(new Date());
         calendar.add(Calendar.YEAR, -100);
 
-        aDirectoryService.addOrModify("cn="+aUsername+","+aUsersDn, new ParametersBuilder()
+        aDirectoryService.addOrModify("uid="+aUsername+","+aUsersDn, new ParametersBuilder()
                 .add("pwdAccountLockedTime", LdapDateUtil.format(calendar.getTime()))
                 .build()
         );

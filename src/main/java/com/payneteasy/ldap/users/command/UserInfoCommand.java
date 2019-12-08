@@ -45,7 +45,7 @@ public class UserInfoCommand implements ICommand {
         LdapQuery query = holder.find("user-info");
         String userParameter = aOptionSet.valueOf(usernameSpec);
         if(!userParameter.startsWith("cn")) {
-            userParameter = "cn="+userParameter+","+theUsersBase;
+            userParameter = "uid="+userParameter+","+theUsersBase;
         }
 
         Map<String, Object> result = aDirectoryService.get(userParameter, query.attributes);

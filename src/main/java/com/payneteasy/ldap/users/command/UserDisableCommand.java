@@ -48,7 +48,7 @@ public class UserDisableCommand implements ICommand {
         if(userParameter.startsWith("cn")) {
             name = userParameter;
         } else {
-            name = "cn="+userParameter+","+theUsersBase;
+            name = "uid="+userParameter+","+theUsersBase;
         }
 
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmss'Z'");

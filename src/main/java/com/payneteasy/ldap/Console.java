@@ -178,7 +178,7 @@ public class Console {
                         , options.valueOf(usernameSpec)
                         , options.valueOf(usersDnSpec)
                         , options.valueOf(groupsDnSpec)
-                        , options.has(ppolicyDnSpec) ? options.valueOf(ppolicyDnSpec) : "cn=default,ou=policies,dc=yoyyo"
+                        , options.has(ppolicyDnSpec) ? options.valueOf(ppolicyDnSpec) : "ou=Policies,dc=econsys,dc=com"
                 );
 
 

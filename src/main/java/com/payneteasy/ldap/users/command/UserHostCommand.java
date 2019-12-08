@@ -50,7 +50,7 @@ public class UserHostCommand implements ICommand {
         if(userParameter.startsWith("cn")) {
             name = userParameter;
         } else {
-            name = "cn="+userParameter+","+theUsersBase;
+            name = "uid="+userParameter+","+theUsersBase;
         }
 
         Map<String, Object> parameters = new HashMap<String, Object>();

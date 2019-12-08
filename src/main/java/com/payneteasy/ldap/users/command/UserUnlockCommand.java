@@ -46,7 +46,7 @@ public class UserUnlockCommand implements ICommand {
         if(userParameter.startsWith("cn")) {
             name = userParameter;
         } else {
-            name = "cn="+userParameter+","+theUsersBase;
+            name = "uid="+userParameter+","+theUsersBase;
         }
 
         Map<String, Object> userInfo = aDirectoryService.get(name, "cn", "pwdAccountLockedTime");

@@ -48,7 +48,7 @@ public class UserResetCommand implements ICommand {
         if(userParameter.startsWith("cn")) {
             name = userParameter;
         } else {
-            name = "cn="+userParameter+","+theUsersBase;
+            name = "uid="+userParameter+","+theUsersBase;
         }
 
         createUser(aDirectoryService, userParameter, name, aFormatService);
