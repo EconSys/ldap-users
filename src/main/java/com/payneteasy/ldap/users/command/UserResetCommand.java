@@ -57,10 +57,10 @@ public class UserResetCommand implements ICommand {
     public void createUser(IDirectoryService aDirectoryService, String userParameter, String name,  IOutputService aFormatService) throws NamingException {
         String password = PasswordGenerator.createPassword();
 
-        aDirectoryService.addOrModify(thePpoliciesDn, new ParametersBuilder()
-                .add("pwdMinAge", "1")
-                .build()
-        );
+//         aDirectoryService.addOrModify(thePpoliciesDn, new ParametersBuilder()
+//                 .add("pwdMinAge", "1")
+//                 .build()
+//         );
 
         aDirectoryService.addOrModify(name, new ParametersBuilder()
                 .add("userPassword", password)
@@ -68,10 +68,10 @@ public class UserResetCommand implements ICommand {
                 .build()
         );
 
-        aDirectoryService.addOrModify(thePpoliciesDn, new ParametersBuilder()
-                .add("pwdMinAge", "86400")
-                .build()
-        );
+//         aDirectoryService.addOrModify(thePpoliciesDn, new ParametersBuilder()
+//                 .add("pwdMinAge", "86400")
+//                 .build()
+//         );
 
         aFormatService.println("Username / password is "+userParameter+" / "+password);
 
