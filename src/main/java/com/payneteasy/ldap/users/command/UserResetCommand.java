@@ -64,7 +64,7 @@ public class UserResetCommand implements ICommand {
 
         aDirectoryService.addOrModify(name, new ParametersBuilder()
                 .add("userPassword", password)
-                .add("pwdReset", "TRUE")
+//                 .add("pwdReset", "TRUE")
                 .build()
         );
 
