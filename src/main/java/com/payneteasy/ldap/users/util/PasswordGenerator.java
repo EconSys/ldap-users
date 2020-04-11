@@ -23,7 +23,7 @@ public class PasswordGenerator {
         StringBuilder sb = new StringBuilder();
         sb.append(randomChars(UPPER_CASE  , random(3, 5) ));
         sb.append(randomChars(LOWER_CASE  , random(3, 5) ));
-        sb.append(randomChars(DIGITS      , random(1, 2) ));
+        sb.append(randomChars(DIGITS      , random(2, 2) ));
         sb.append(randomChars(PUNCTUATIONS, random(1, 1) ));
         sb.append(randomChars(SYMBOLS     , random(1, 1) ));
 
